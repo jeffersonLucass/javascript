@@ -1,0 +1,8 @@
+// let 3nome = 'teste'
+let nome3='teste'
+let $nome4='teste'
+let _nome5='teste'
+//let @nome=' teste'
+//let !nome='teste'
+let Nome='teste'
+let seuNome='teste'
