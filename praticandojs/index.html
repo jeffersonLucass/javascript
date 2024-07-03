@@ -4,49 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Padrão HTML com JavaScript</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="mailto:teste@gmail.com" method="post" enctype="text/plain" name="cadastro">
-        <p>Por favor,preencha os campos abaixo e depois clique no botão Enviar.Caso necessite apagar os dado,dê um clique no botão Limpar <br> Muito Obrigado! <br><br><br></p>
-        Nome Completo:<input type="text" name="nome" size="35"><br>
-        Seu e-mail:<input type="text" name="email" size="35"> <br>
-        Sexo:<br>
-          <input type="radio" name="sexo">Feminino<br>
-          <input type="radio" name="sexo">Masculino<br><br>
-        Estado Civil:<br>  
-          <input type="radio" name="civil" id="s"> Solteiro <br>
-          <input type="radio" name="civil" id="c"> Casado <br> 
-          <input type="radio" name="civil" id="e"> Enrolado <br><br>
-        Bens que possui:<br>
-          <input type="checkbox" name="bens" id="c"> Casa <br>
-          <input type="checkbox" name="bens" id="a"> Automovel <br>
-          <input type="checkbox" name="bens" id="m"> Moto <br><br>
-        Faixa de idade: <select name="faixaidade">
-          <option value="3a10">3 a 10 anos</option>
-          <option value="11a25">11 a 25 anos</option>
-          <option value="26a35">26 a 35 anos</option>
-          <option value="36a55">36 a 55 anos</option>
-          <option value="56a90">56 a 90 anos</option>
-        </select>
+        <p>Por favor, preencha os campos abaixo e depois clique no botão Enviar. Caso necessite apagar os dados, clique no botão Limpar. <br> Muito Obrigado! <br><br><br></p>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" id="nome" size="35"><br>
 
-        Hobby preferido: <select name="hobby">
-            <option value="Livros">Ler livros</option>
+        <label for="email">Seu e-mail:</label>
+        <input type="email" name="email" id="email" size="35"><br>
+
+        <label>Sexo:</label><br>
+        <input type="radio" name="sexo" id="feminino">
+        <label for="feminino">Feminino</label><br>
+        <input type="radio" name="sexo" id="masculino">
+        <label for="masculino">Masculino</label><br><br>
+
+        <label>Estado Civil:</label><br>  
+        <input type="radio" name="civil" id="solteiro">
+        <label for="solteiro">Solteiro</label><br>
+        <input type="radio" name="civil" id="casado">
+        <label for="casado">Casado</label><br> 
+        <input type="radio" name="civil" id="enrolado">
+        <label for="enrolado">Enrolado</label><br><br>
+
+        <label>Bens que possui:</label><br>
+        <input type="checkbox" name="bens" id="casa">
+        <label for="casa">Casa</label><br>
+        <input type="checkbox" name="bens" id="automovel">
+        <label for="automovel">Automóvel</label><br>
+        <input type="checkbox" name="bens" id="moto">
+        <label for="moto">Moto</label><br><br>
+
+        <label for="faixaidade">Faixa de idade:</label>
+        <select name="faixaidade" id="faixaidade">
+            <option value="3a10">3 a 10 anos</option>
+            <option value="11a25">11 a 25 anos</option>
+            <option value="26a35">26 a 35 anos</option>
+            <option value="36a55">36 a 55 anos</option>
+            <option value="56a90">56 a 90 anos</option>
+        </select><br>
+
+        <label for="hobby">Hobby preferido:</label>
+        <select name="hobby" id="hobby">
+            <option value="livros">Ler livros</option>
             <option value="musica">Ouvir música</option>
             <option value="cinema">Assistir filmes</option>
             <option value="esporte">Praticar esportes</option>
             <option value="games">Jogar games</option>
-
         </select><br><br>
 
-        Observações Gerais:<br>
-        <textarea name="observacoes"  cols="60" rows="5" ></textarea><br>
-        
+        <label for="observacoes">Observações Gerais:</label><br>
+        <textarea name="observacoes" id="observacoes" cols="60" rows="5"></textarea><br><br>
+
         <input type="submit" value="Enviar os dados">
         <input type="reset" value="Limpar os dados">
     </form>
-    
-
 </body>
 </html>
