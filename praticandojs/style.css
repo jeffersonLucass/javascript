@@ -17,7 +17,8 @@ body {
     background-size: cover; /* Ajusta a imagem para cobrir o fundo inteiro */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat;
-    background-attachment: fixed;/* Evita que a imagem se repita */
+    background-attachment: fixed;
+    border-radius: 20px;/* Evita que a imagem se repita */
     
 }
 
