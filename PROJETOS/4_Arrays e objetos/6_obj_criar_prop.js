@@ -15,4 +15,4 @@ pessoa.casado = false
 
 console.log(pessoa.casado)
 
-console.log(pessoa)
+console.table(pessoa)
