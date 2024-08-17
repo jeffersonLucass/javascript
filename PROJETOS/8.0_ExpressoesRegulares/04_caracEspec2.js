@@ -6,6 +6,7 @@ console.log(dia.test("05") && "05".length == 2);
 console.log(dia.test("asd1"));
 
 const palavrasTresLetras = /\w\w\w/
+//\w significa qualquer caractere alfanúmerico.
 
 console.log(palavrasTresLetras.test("asd"));
 console.log(palavrasTresLetras.test("123"));
