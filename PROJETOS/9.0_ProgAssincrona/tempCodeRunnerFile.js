@@ -1,1 +1,0 @@
-VerificarNumero(3);
