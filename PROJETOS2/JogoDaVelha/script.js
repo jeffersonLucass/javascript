@@ -29,7 +29,7 @@ for(let i = 0; i < boxes.length; i++) {
         player1++;
 
         // jogada ia
-        if(secondPlayer == 'ai-player') {
+        if(secondPlayer == 'ai-players') {
 
           computerPlay();
           player2++;
@@ -244,5 +244,56 @@ function declareWinner(winner) {
     boxesToRemove[i].parentNode.removeChild(boxesToRemove[i]);
   }
 
+
 }
 
+// evento para ver se é contra IA ou segundo player
+for(let i = 0; i < buttons.length; i++) {
+
+  buttons[i].addEventListener("click", function() {
+
+    secondPlayer = this.getAttribute('id');
+
+    for(j = 0; j < buttons.length; j++) {
+      buttons[j].style.display = 'none';
+    }
+
+    setTimeout(function() {
+      let container = document.querySelector("#container");
+      container.classList.remove("hide");
+    }, 500);
+
+  });
+
+}
+
+// jogada IA 
+function computerPlay() {
+
+  let cloneO = o.cloneNode(true);
+  counter = 0;
+  filled = 0;
+          
+  for(let i = 0; i < boxes.length; i++) {
+
+    let randomNumber = Math.floor(Math.random() * 5);
+
+    // só se não tiver marcado anteriormente
+    if(boxes[i].childNodes[0] == undefined) {  
+      if(randomNumber <= 1) {
+        boxes[i].appendChild(cloneO);
+        counter++;
+        break;
+      }
+    // checar quantas estão preenchidas        
+    } else {
+      filled++;
+    }
+
+  }
+
+  if(counter == 0 && filled < 9) {
+    computerPlay();
+  }
+
+}
