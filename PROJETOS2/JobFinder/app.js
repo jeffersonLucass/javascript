@@ -6,6 +6,7 @@ const db         = require('./db/connection');
 const bodyParser = require('body-parser');
 const Job        = require('./models/Job');
 
+
  
 const PORT = 3000;
  
@@ -39,12 +40,27 @@ db
  
   //routes
 app.get('/', (req, res) => {
-    Job.findAll({order: [['createdAt', 'DESC']]}).then(jobs => {
+
+    let search = req.body.job;
+    if(!search){
+      Job.findAll({order: [['createdAt', 'DESC']]}).then(jobs => {
           
-      res.render('index', {
-        jobs
-      });
-    })
+        res.render('index', {
+          jobs
+        });
+      })
+    }else{
+      Job.findAll({
+        
+        where: {},
+        order: [['createdAt', 'DESC']]}).then(jobs => {
+          
+        res.render('index', {
+          jobs
+        });
+      })
+    }
+   
 });
 
 //jobs routes
