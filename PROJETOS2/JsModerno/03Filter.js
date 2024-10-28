@@ -13,7 +13,7 @@ const user =
 {name: 'Lucas', avaliable: false},
 {name: 'pedro', avaliable: false},
 {name: 'gabriel', avaliable: true}];
-
+ 
 
 const avaliableUsers = user.filter((user) => user.avaliable);
 const NotavaliableUsers = user.filter((user) => !user.avaliable);
