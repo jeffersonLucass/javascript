@@ -143,3 +143,16 @@ buttons.forEach((btn) => {
     }
   });
 });
+
+
+// Alternância de Tema
+const themeToggleBtn = document.querySelector("#theme-toggle-btn");
+
+themeToggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    
+    // Atualiza o ícone do botão
+    themeToggleBtn.innerText = 
+        document.body.classList.contains("dark-theme") ? "🌞" : "🌜";
+});
+

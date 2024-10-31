@@ -12,6 +12,52 @@ body{
     align-items: center;
     padding: 3em;
 }
+/* Tema Escuro */
+body.dark-theme {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.dark-theme #calc {
+    background-color: #444;
+}
+
+body.dark-theme #buttons-container button {
+    background-color: #666;
+    color: #fff;
+}
+
+body.dark-theme #buttons-container #equal-btn {
+    background-color: #3a91d8;
+    color: #fff;
+}
+
+/* Botão de alternância de tema */
+#theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #666;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Muda a cor do botão ao alternar o tema */
+body.dark-theme #theme-toggle-btn {
+    background-color: #444;
+}
+
+/* Efeito de hover */
+#theme-toggle-btn:hover {
+    background-color: #888;
+    transform: scale(1.05);
+}
+
 
 #calc{
     width: 400px;
